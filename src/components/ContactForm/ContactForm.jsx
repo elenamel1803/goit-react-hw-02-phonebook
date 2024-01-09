@@ -32,8 +32,13 @@ class ContactForm extends Component {
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
 
+    // if (existingContact) {
+    //   alert(`${name} is already in contacts.`);
+    //   return;
+    // }
+
     if (existingContact) {
-      alert(`"${name}" is already in contacts.`);
+      alert(`${formatName(name)} is already in contacts.`);
       return;
     }
 
