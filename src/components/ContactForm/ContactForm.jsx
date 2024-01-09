@@ -18,7 +18,7 @@ class ContactForm extends Component {
 
   handleSubmit = evt => {
     evt.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
     const { name, number } = this.state;
     const { contacts, onAddContact } = this.props;
 
@@ -31,11 +31,6 @@ class ContactForm extends Component {
     const existingContact = contacts.find(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
-
-    // if (existingContact) {
-    //   alert(`${name} is already in contacts.`);
-    //   return;
-    // }
 
     if (existingContact) {
       alert(`${formatName(name)} is already in contacts.`);

@@ -15,7 +15,7 @@ class App extends Component {
   };
 
   addContact = newContact => {
-    console.log(newContact);
+    // console.log(newContact);
     this.setState(prevState => ({
       contacts: [...prevState.contacts, newContact],
     }));
@@ -40,7 +40,6 @@ class App extends Component {
 
   render() {
     const { contacts, filter } = this.state;
-    console.log(filter);
     return (
       <>
         <h1>Phonebook</h1>
